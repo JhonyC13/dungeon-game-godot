@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8tlk6iei5ak0"]
+
+[ext_resource type="Script" path="res://scripts/bullet.gd" id="1_icsxl"]
+[ext_resource type="Texture2D" uid="uid://dk6qj8ldxj5hn" path="res://assets/bullet.png" id="1_sgxyd"]
+
+[node name="bullet" type="Node2D"]
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_icsxl")
+
+[node name="texture" type="Sprite2D" parent="."]
+position = Vector2(6, -0.2)
+texture = ExtResource("1_sgxyd")
+
+[node name="exit_screen_notifier" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(4.05, 0.3)
+scale = Vector2(0.175, 0.25)
+
+[connection signal="screen_exited" from="exit_screen_notifier" to="." method="_on_exit_screen_notifier_screen_exited"]

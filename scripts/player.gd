@@ -21,13 +21,17 @@ func _process(delta):
 		Input.set_custom_mouse_cursor(shoot_mouse_cursor, 0, Vector2(9, 9))
 	else:
 		Input.set_custom_mouse_cursor(aim_mouse_cursor, 0, Vector2(9, 9))
+	
 
 
 func _unhandled_input(event):
 	if event.is_action_pressed("click"):
 		is_shooting = true
+		get_tree().get_first_node_in_group("guns").shoot()
+		get_tree().get_first_node_in_group("guns").timer.start()
 	if event.is_action_released("click"):
 		is_shooting = false
+		get_tree().get_first_node_in_group("guns").timer.stop()
 	
 #funcao para rotacionar os braços. Muito parecida com a funcao look_at() da prórpia godot, mas aqui é possível definir a velocidade de rotação
 func rotate_arms(self_object, target_global_posiiton: Vector2, armsRotationSpeed, delta):

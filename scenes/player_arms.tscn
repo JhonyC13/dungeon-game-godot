@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bbj5r4pn5lr7a"]
 
 [ext_resource type="Texture2D" uid="uid://dj7o3vao0krca" path="res://assets/cloud-arms.png" id="1_e2470"]
-[ext_resource type="Texture2D" uid="uid://cvl2hki56le2a" path="res://assets/test-gun.png" id="2_jj4yd"]
+[ext_resource type="PackedScene" uid="uid://cohgk1hf7x8is" path="res://scenes/gun.tscn" id="2_b52wx"]
 
 [node name="arms" type="Node2D"]
 
@@ -10,10 +10,12 @@ position = Vector2(9, -10)
 scale = Vector2(5, 5)
 texture = ExtResource("1_e2470")
 
-[node name="gun" type="Sprite2D" parent="."]
-position = Vector2(23, -13)
+[node name="gun_instantiate_position" type="Marker2D" parent="."]
+position = Vector2(13, -2)
 scale = Vector2(5, 5)
-texture = ExtResource("2_jj4yd")
+
+[node name="gun" parent="." instance=ExtResource("2_b52wx")]
+position = Vector2(13, -2)
 
 [node name="front_arm" type="Sprite2D" parent="."]
 scale = Vector2(5, 5)
