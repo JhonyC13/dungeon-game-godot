@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch4kdakovke1v"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_6mv1x"]
+[ext_resource type="Texture2D" uid="uid://bi74ccybftui1" path="res://assets/cloud-character-without-arms.png" id="1_ammdl"]
+[ext_resource type="PackedScene" uid="uid://bbj5r4pn5lr7a" path="res://scenes/player_arms.tscn" id="2_aluy6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eom1l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ammdl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_6mv1x")
+
+[node name="texture" type="AnimatedSprite2D" parent="."]
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_eom1l")
+
+[node name="arms" type="Node2D" parent="texture"]
+position = Vector2(0, 1.8)
+rotation = -0.00179103
+scale = Vector2(0.2, 0.2)
+
+[node name="player_arms" parent="texture/arms" instance=ExtResource("2_aluy6")]
+position = Vector2(19.0036, -1.96597)
