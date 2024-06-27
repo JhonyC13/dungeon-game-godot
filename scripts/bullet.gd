@@ -1,11 +1,11 @@
 extends Node2D
 
 var direction
-var speed := 2
+var speed := 2000.0
 
 func _ready():
 	look_at(get_global_mouse_position())
-	direction = (get_global_mouse_position() - global_position)
+	direction = (get_global_mouse_position() - global_position).normalized()
 	
 
 func _process(delta):

@@ -7,6 +7,7 @@ var aim_mouse_cursor = preload("res://assets/mouse_cursor_aim.png")
 var shoot_mouse_cursor = preload("res://assets/mouse_cursor_shooting.png")
 
 var is_shooting := false
+var is_first_bullet := true
 
 func _process(delta):
 	#rotate_arms(arms, get_global_mouse_position(), 250.0, delta)
@@ -25,14 +26,20 @@ func _process(delta):
 
 
 func _unhandled_input(event):
-	if event.is_action_pressed("click"):
+	if event.is_action_pressed("click") and is_first_bullet:
 		is_shooting = true
-		get_tree().get_first_node_in_group("guns").shoot()
+		if is_first_bullet:
+			get_tree().get_first_node_in_group("guns").shoot()
+			is_first_bullet = false
 		get_tree().get_first_node_in_group("guns").timer.start()
+		
 	if event.is_action_released("click"):
 		is_shooting = false
 		get_tree().get_first_node_in_group("guns").timer.stop()
+		if !is_first_bullet:
+			is_first_bullet = true
 	
+
 #funcao para rotacionar os braços. Muito parecida com a funcao look_at() da prórpia godot, mas aqui é possível definir a velocidade de rotação
 func rotate_arms(self_object, target_global_posiiton: Vector2, armsRotationSpeed, delta):
 	var direction = (target_global_posiiton - self_object.global_position)

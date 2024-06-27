@@ -5,9 +5,6 @@ extends Node2D
 @onready var bullet_spawn_position = $bullet_spawn_position
 @onready var timer = $Timer
 
-func _ready():
-	pass
-
 func shoot():
 	var bullet_instance = bullet_scene.instantiate()
 	bullet_instance.global_position = bullet_spawn_position.global_position
