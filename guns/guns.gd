@@ -12,6 +12,7 @@ var shoot_mouse_cursor = preload("res://assets/mouse_cursor_shooting.png")
 var is_shooting := false
 var is_first_bullet := true
 
+
 func _ready():
 	timer.timeout.connect(_on_timer_timeout)
 	delay_shoot_timer.timeout.connect(_on_delay_timer_timeout)

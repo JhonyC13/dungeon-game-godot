@@ -2,9 +2,10 @@ extends Node2D
 class_name BulletsClass
 
 @export var exit_scrren_notifier: VisibleOnScreenNotifier2D
+@export var speed := 1500.0
 
 var direction
-var speed := 2000.0
+
 
 func _ready():
 	exit_scrren_notifier.screen_exited.connect(_on_exit_screen_notifier_screen_exited)
