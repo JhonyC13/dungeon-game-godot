@@ -69,10 +69,10 @@ sprite_frames = SubResource("SpriteFrames_eom1l")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="arms" type="Node2D" parent="anim"]
-position = Vector2(3.72529e-10, 3.6)
+[node name="arms" type="Node2D" parent="anim" groups=["arms"]]
+position = Vector2(9.31323e-11, -0.2)
 rotation = -0.00179103
 scale = Vector2(0.2, 0.2)
 
 [node name="player_arms" parent="anim/arms" instance=ExtResource("2_aluy6")]
-position = Vector2(19.0036, -1.96597)
+position = Vector2(18.9749, 14.034)

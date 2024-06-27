@@ -4,9 +4,8 @@ var direction
 var speed := 2000.0
 
 func _ready():
+	direction = (get_global_mouse_position() - get_tree().get_first_node_in_group("arms").global_position).normalized()
 	look_at(get_global_mouse_position())
-	direction = (get_global_mouse_position() - global_position).normalized()
-	
 
 func _process(delta):
 	translate(direction * speed * delta)
