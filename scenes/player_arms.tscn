@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bbj5r4pn5lr7a"]
 
 [ext_resource type="Script" path="res://scripts/player_arms.gd" id="1_1k4er"]
-[ext_resource type="Texture2D" uid="uid://dj7o3vao0krca" path="res://assets/cloud-arms.png" id="1_e2470"]
+[ext_resource type="Texture2D" uid="uid://dj7o3vao0krca" path="res://assets/cloud_character/cloud-arms.png" id="2_a7dnr"]
 
 [node name="arms" type="Node2D"]
 script = ExtResource("1_1k4er")
@@ -9,7 +9,7 @@ script = ExtResource("1_1k4er")
 [node name="back_arm" type="Sprite2D" parent="."]
 position = Vector2(9, -10)
 scale = Vector2(5, 5)
-texture = ExtResource("1_e2470")
+texture = ExtResource("2_a7dnr")
 
 [node name="gun_instantiate_position" type="Marker2D" parent="."]
 position = Vector2(13, -2)
@@ -18,4 +18,4 @@ scale = Vector2(5, 5)
 [node name="front_arm" type="Sprite2D" parent="."]
 z_index = 1
 scale = Vector2(5, 5)
-texture = ExtResource("1_e2470")
+texture = ExtResource("2_a7dnr")

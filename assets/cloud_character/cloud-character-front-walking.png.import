@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj7o3vao0krca"
-path="res://.godot/imported/cloud-arms.png-1bf0020bfc3bc186cda06031d0609362.ctex"
+uid="uid://c8kmbmjeqn1o4"
+path="res://.godot/imported/cloud-character-front-walking.png-3718f340cc281b10ed8feb39c069a79a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cloud-arms.png"
-dest_files=["res://.godot/imported/cloud-arms.png-1bf0020bfc3bc186cda06031d0609362.ctex"]
+source_file="res://assets/cloud_character/cloud-character-front-walking.png"
+dest_files=["res://.godot/imported/cloud-character-front-walking.png-3718f340cc281b10ed8feb39c069a79a.ctex"]
 
 [params]
 

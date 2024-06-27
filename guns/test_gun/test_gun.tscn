@@ -20,6 +20,7 @@ position = Vector2(2, -2)
 texture = ExtResource("2_a2xub")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.6
+wait_time = 0.3
 
 [node name="delay_shoot_timer" type="Timer" parent="."]
+wait_time = 0.3

@@ -1,31 +1,78 @@
-[gd_scene load_steps=5 format=3 uid="uid://ch4kdakovke1v"]
+[gd_scene load_steps=12 format=3 uid="uid://ch4kdakovke1v"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_6mv1x"]
-[ext_resource type="Texture2D" uid="uid://bi74ccybftui1" path="res://assets/cloud-character-without-arms.png" id="1_ammdl"]
 [ext_resource type="PackedScene" uid="uid://bbj5r4pn5lr7a" path="res://scenes/player_arms.tscn" id="2_aluy6"]
+[ext_resource type="Texture2D" uid="uid://b02mkyfhgf1ms" path="res://assets/cloud_character/cloud-idle.png" id="2_tww3q"]
+[ext_resource type="Texture2D" uid="uid://colro4107jx6l" path="res://assets/cloud_character/cloud_walking_front.png" id="3_s54qy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fyg1"]
+atlas = ExtResource("2_tww3q")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntwoe"]
+atlas = ExtResource("2_tww3q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysldq"]
+atlas = ExtResource("2_tww3q")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afdu4"]
+atlas = ExtResource("2_tww3q")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awjlo"]
+atlas = ExtResource("3_s54qy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1sxvv"]
+atlas = ExtResource("3_s54qy")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eom1l"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ammdl")
+"texture": SubResource("AtlasTexture_4fyg1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntwoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysldq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afdu4")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awjlo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1sxvv")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 4.5
 }]
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_6mv1x")
 
-[node name="texture" type="AnimatedSprite2D" parent="."]
+[node name="anim" type="AnimatedSprite2D" parent="."]
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_eom1l")
+animation = &"idle"
+autoplay = "idle"
 
-[node name="arms" type="Node2D" parent="texture"]
-position = Vector2(0, 1.8)
+[node name="arms" type="Node2D" parent="anim"]
+position = Vector2(3.72529e-10, 3.6)
 rotation = -0.00179103
 scale = Vector2(0.2, 0.2)
 
-[node name="player_arms" parent="texture/arms" instance=ExtResource("2_aluy6")]
+[node name="player_arms" parent="anim/arms" instance=ExtResource("2_aluy6")]
 position = Vector2(19.0036, -1.96597)

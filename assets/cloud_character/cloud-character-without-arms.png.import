@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3x6nyfegtddv"
-path="res://.godot/imported/cloud-character-back-walking.png-9fe8e2fc55f36ddc65f339b742c3c56e.ctex"
+uid="uid://bi74ccybftui1"
+path="res://.godot/imported/cloud-character-without-arms.png-8d55da36f737d572af1858e32323bcd3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cloud-character-back-walking.png"
-dest_files=["res://.godot/imported/cloud-character-back-walking.png-9fe8e2fc55f36ddc65f339b742c3c56e.ctex"]
+source_file="res://assets/cloud_character/cloud-character-without-arms.png"
+dest_files=["res://.godot/imported/cloud-character-without-arms.png-8d55da36f737d572af1858e32323bcd3.ctex"]
 
 [params]
 

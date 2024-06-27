@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi74ccybftui1"
-path="res://.godot/imported/cloud-character-without-arms.png-c538b90ac7e848f6ac4ed2362fe59cdb.ctex"
+uid="uid://dj7o3vao0krca"
+path="res://.godot/imported/cloud-arms.png-0a2b0b2907453e667bc7f6adb992a412.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cloud-character-without-arms.png"
-dest_files=["res://.godot/imported/cloud-character-without-arms.png-c538b90ac7e848f6ac4ed2362fe59cdb.ctex"]
+source_file="res://assets/cloud_character/cloud-arms.png"
+dest_files=["res://.godot/imported/cloud-arms.png-0a2b0b2907453e667bc7f6adb992a412.ctex"]
 
 [params]
 
