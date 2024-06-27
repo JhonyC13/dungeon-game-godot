@@ -42,7 +42,3 @@ func rotate_arms(self_object, target_global_posiiton: Vector2, armsRotationSpeed
 	var angleTo = self_object.transform.x.angle_to(direction)
 	self_object.rotate(sign(angleTo) * min(delta * armsRotationSpeed, abs(angleTo)))
 	
-	if direction.x >= 0:
-		arms.scale.x = 0.2
-	else:
-		arms.scale.x = -0.2
