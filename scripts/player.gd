@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var arms = $anim/arms
 @onready var player_arms = $anim/arms/player_arms
 
-var move_speed := 230.0
+var move_speed := 300.0
 var acceleration := 0.3
 var friction := 0.25
 

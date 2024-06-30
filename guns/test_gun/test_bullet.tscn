@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://mjddppgkpxxo"]
+[gd_scene load_steps=4 format=3 uid="uid://b8xewdse8h554"]
 
 [ext_resource type="Script" path="res://guns/bullets.gd" id="1_yxspy"]
 [ext_resource type="Texture2D" uid="uid://dk6qj8ldxj5hn" path="res://assets/bullet.png" id="2_f638p"]
 
-[node name="test_bullet" type="Node2D" node_paths=PackedStringArray("exit_scrren_notifier")]
+[sub_resource type="CircleShape2D" id="CircleShape2D_dm52l"]
+radius = 4.01995
+
+[node name="test_bullet" type="Area2D" node_paths=PackedStringArray("exit_scrren_notifier")]
 scale = Vector2(2.5, 2.5)
 script = ExtResource("1_yxspy")
 exit_scrren_notifier = NodePath("exit_screen_notifier")
@@ -15,3 +18,6 @@ texture = ExtResource("2_f638p")
 [node name="exit_screen_notifier" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(4.76837e-07, -0.05)
 scale = Vector2(0.175, 0.205)
+
+[node name="collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dm52l")

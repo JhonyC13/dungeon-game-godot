@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://guns/guns.gd" id="1_ckq8k"]
 [ext_resource type="Texture2D" uid="uid://cvl2hki56le2a" path="res://assets/test-gun.png" id="2_a2xub"]
-[ext_resource type="PackedScene" uid="uid://mjddppgkpxxo" path="res://guns/test_gun/test_bullet.tscn" id="2_nituu"]
+[ext_resource type="PackedScene" uid="uid://b8xewdse8h554" path="res://guns/test_gun/test_bullet.tscn" id="2_nituu"]
 
 [node name="test_gun" type="Node2D" node_paths=PackedStringArray("bullet_spawn_position", "timer", "delay_shoot_timer")]
 scale = Vector2(5, 5)
