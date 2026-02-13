@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bbj5r4pn5lr7a"]
 
-[ext_resource type="Script" path="res://scripts/player_arms.gd" id="1_1k4er"]
+[ext_resource type="Script" uid="uid://d0pb3gigfliam" path="res://scripts/player_arms.gd" id="1_1k4er"]
 [ext_resource type="Texture2D" uid="uid://dj7o3vao0krca" path="res://assets/cloud_character/cloud-arms.png" id="2_a7dnr"]
 
 [node name="arms" type="Node2D"]
